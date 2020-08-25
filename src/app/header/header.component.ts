@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   // tslint:disable-next-line: no-output-on-prefix
-  @Output() onChangeToRecipe = new EventEmitter<boolean>();
+  @Output() onNavigate = new EventEmitter<string>();
   collapsed = false;
 
   constructor() { }
@@ -15,14 +15,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  onClickRecipe(): void {
-    this.onChangeToRecipe.emit(true);
+  onSelect(feature: string): void{
+      this.onNavigate.emit(feature);
   }
-
-  onClickShopping(): void{
-    this.onChangeToRecipe.emit(false);
-  }
+ 
 
 
 

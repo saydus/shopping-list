@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <app-header (onChangeToRecipe)="onChangeTab($event)"></app-header>
+    <app-header (onNavigate)="onChangeTab($event)"></app-header>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="showRecipes"></app-recipes>
+      <app-recipes *ngIf="feature === 'recipe'"></app-recipes>
 
-      <app-shopping-list *ngIf="!showRecipes"></app-shopping-list>
+      <app-shopping-list *ngIf="feature === 'shopping'"></app-shopping-list>
     </div>
   </div>
 </div>
