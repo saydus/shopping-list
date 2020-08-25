@@ -9,8 +9,8 @@ export class AppComponent {
   collapsed = true;
   feature = 'recipe';
 
-  onChangeTab(recipeWindow: string): void {
-    this.feature = recipeWindow;
+  onChangeTab(featureSelected: string): void {
+    this.feature = featureSelected;
   }
 
 }
