@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   collapsed = true;
+  showRecipes = true;
+
+  onChangeTab(recipeWindow: boolean): void {
+    this.showRecipes = recipeWindow;
+  }
 
 }
